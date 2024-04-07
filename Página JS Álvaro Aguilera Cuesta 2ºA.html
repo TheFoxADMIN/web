@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JavaScript</title>
+    <script src="scripts.js" defer></script>
+    <style>
+        button {
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body style="background-color: lightcoral;"Z>
+
+    <h1 style ="font-family:Impact;text-align:center";>Ejercicios JavaScript Álvaro Aguilera Cuesta 2ºA</h1>
+
+    <button onclick="ejercicio1()">¿Como eres?</button>
+    <button onclick="ejercicio2()">Suma de números</button>
+    <button onclick="ejercicio3()">¿Eres mayor de edad?</button>
+    <button onclick="ejercicio4()">Página de tecnologia</button>
+    <button onclick="ejercicio5()">Adivina el número aleatorio</button>
+    <button onclick="ejercicio6()">Test de 5 preguntas</button>
+    <script>
+         alert("Acabas de acceder a la pagina web de Álvaro Aguilera Cuesta 2ºA con Javascript, disfrute de su experiencia :D");
+        function ejercicio1() {
+            // Ejercicio 1: Preguntas al usuario sobre edad, color de pelo, etc.
+            var j = prompt("¿Como te llamas?");
+            var x = parseInt(prompt("¿Cuantos años tienes?"));
+            var y = prompt("¿Cual es tu color de pelo?");
+            var z = prompt("¿Cual es tu comida favorita?");
+            var i = parseInt(prompt("Cual es tu número favorito"));
+            var Nombre ="Te llamas "+j+"";
+            var Edad= ", tienes "+x+" años";
+            var Pelo = ", tienes el pelo de color "+y+"";
+            var Comida = ", te gusta comer "+z+"";
+            var Numero = " y tu número favorito es el "+i+"";
+            alert (Nombre + Edad + Pelo + Comida + Numero);
+            alert(resultado);
+        }
+
+        function ejercicio2() {
+            var x = parseInt(prompt("Dime un número"));
+            var y = parseInt(prompt("Dime otro"));
+            var suma = x + y;
+            var resultado = ("La suma de los dos número es " + suma);
+            alert (resultado);
+        }
+
+        function ejercicio3() {
+            var edad = parseInt(prompt("¿Cual es tu edad?"));
+            if (edad > 18) {alert("Eres mayor de edad")}
+            else {alert("Eres menor de edad")};
+        }
+
+        function ejercicio4() {
+            if (confirm ("¿Quieres ir a la web de tecnologia del instituto?"))
+            {window.open("https://ieslarra-informatica.blogspot.com/p/trabajos-tercer-trimestre-2-de.html")}
+            else
+            {alert("Nos quedaremos aqui, si cambias de opinion vuelve a darle al botón :)")}
+        }
+
+        function ejercicio5() {
+            var aleatorio = Math.round(Math.random()*5);
+            var numeroElegido = parseInt(prompt("¿Qué Número Es?"));
+            if (aleatorio == numeroElegido) {document.write("¡Acertaste :D!")}
+            else {alert("Vaya, no has acertado, más suerte la proxima")};
+        }
+        function ejercicio6() {
+            var i; i = 0
+            var x1 = prompt ("Empezemos con un acertijo:Tengo un arco y soy de madera, pero no una flecha ¿Que soy?")
+            const s1 = ["Violín","violín","Violin","violin"]
+            if (s1.includes(x1)) {
+            alert("Respuesta correcta :D")
+            i=i+1       
+            }else{
+            alert("Respuesta incorrecta :(, suerte con la siguiente")
+            }
+            var x2 = prompt ("¿Como se llama el profesor de religion?")
+            const s2 = ["Ernesto","ernesto"]
+            if (s2.includes(x2)){
+            alert("Respuesta correcta :D")
+            i=i+1
+            }else {
+            alert("Respuesta incorrecta, la siguiente será")
+            }
+            var x3 = prompt ("¿Cual es el animal mamifera que pone huevos?")
+            const s3 = ["Ornitorrinco","ornitorrinco"]
+            if (s3.includes(x3)){
+            alert("Muy bien, esta era difícil")
+            i=i+1
+            }else {
+            alert("Casi aciertas, la proxima lo consigues")
+            }
+            var x4 = prompt ("¿Cuando gano España el mundial?")
+            const s4 = ["2010"]
+            if (s4.includes(x4)){
+            alert("Ole, acertaste")
+            i=i+1
+            }else {
+            alert("Ese año no fue")
+            }
+            var x5 = prompt ("¿Contra que país fue el famosisimo 12-1 de España?")
+            const s5 = ["Malta","Malta"]
+            if (s5.includes(x5)){
+            alert("Si que sabes de futbol")
+            i=i+1
+            }else {
+            alert("Casi, ese país no fue ")
+            }
+            alert("Has acertado " +i+ " de 5 preguntas")
+        }
+    </script>
+</body>
+</html>
